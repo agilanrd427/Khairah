@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Khairah!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(khairah.jpeg);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: black;
+      opacity: 50%;
+      color: white;
+      font-family: cursive;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+    h1, h2, h3 {
+      color: #e91e63;
+    }
+    .button {
+      background: #e91e63;
+      color: white;
+      opacity: 100%;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="home">
+      <h1>Happy Birthday, Khairah! 🎉</h1>
+      <p>You're more magical than all the stars in the sky ✨</p>
+      <button class="button" onclick="showPage('memories')">Next</button>
+    </div>
+
+    <div id="memories" class="hidden">
+      <h2>Beautiful Moments with You ❤️</h2>
+      <p>Remember our first conversation? The laughs? The shy smiles? All of them live rent-free in my heart.</p>
+      <button class="button" onclick="showPage('reasons')">Next</button>
+    </div>
+
+    <div id="reasons" class="hidden">
+      <h2>Why You Make My Heart Skip 💛</h2>
+      <ul>
+        <li>Your laugh is becoming my favorite sound.</li>
+        <li>Your kindness melts me every time.</li>
+        <li>You look cutest when you're annoyed at me (sorry 😅)</li>
+        <li>I still think about your trust on me to show your gallery like I might be your whole world.</li>
+      </ul>
+      <button class="button" onclick="showPage('letter')">Next</button>
+    </div>
+
+    <div id="letter" class="hidden">
+      <h3>A Letter to You 💌</h3>
+      <p>Dear Khairah, on your special day, I just want to say... I want you be my sunshine in my cloudy days, the calm in my chaos, and the smile that lives in my mind rent-free.</p>
+      <p>I don't know how you do it — just being you makes the world better. You deserve happiness, surprises, lemon tea, and the softest hugs today and every day.</p>
+      <button class="button" onclick="showPage('gift')">Last Page</button>
+    </div>
+
+    <div id="gift" class="hidden">
+      <h2>Your Surprise is Coming 🎁</h2>
+      <p>I can’t wrap everything I feel for you… but maybe the video can you smile (or blush?) just a bit?</p>
+      <p>Happy birthday again, Khairah. You’re truly one of a kind. 💖</p>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      const sections = ['home', 'memories', 'reasons', 'letter', 'gift'];
+      sections.forEach(section => {
+        document.getElementById(section).classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
